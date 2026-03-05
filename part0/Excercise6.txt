@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant browser
+    participant server 
+
+    browser ->>server: POST https://fullstack-exampleapp.herokuapp.com/spa/new_note { "content": "HTML is easy", "date": "2023-1-1" }
+    activate server
+    server ->>browser: OK
+    deactivate server
+
+  Comment: This differs from the first normal sending of notes due to there no longer needing to re-recieve the data from the server as our html will be updated automatically due to our prebundled js
