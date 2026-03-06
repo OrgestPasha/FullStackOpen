@@ -1,8 +1,9 @@
 sequenceDiagram
     participant browser
-    participant server 
+    participant serverEndpoint 
+    participant server
 
-    browser ->>server: POST https://fullstack-exampleapp.herokuapp.com/new_note { "content": "HTML is easy", "date": "2023-1-1" }
+    browser ->>serverEndpoint: POST https://fullstack-exampleapp.herokuapp.com/new_note { "content": "HTML is easy", "date": "2023-1-1" }
     activate server
     server ->>browser: OK
     deactivate server
